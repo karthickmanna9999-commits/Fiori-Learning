@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Sat Jun 27 2026 02:08:18 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://s4hana2022.bas:8128/sap/opu/odata/sap/RFM_MANAGE_SALES_ORDERS_SRV",
+    "appName": "salesorderapp.ui",
+    "appTitle": "Sales Order Application",
+    "appDescription": "Sales Order Application",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.102.8",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.27.0",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
