@@ -5,7 +5,7 @@
         <content>
 
                 <List
-                    headerText="Product List" items="{ProductModel>/results}" itemPress="onItemPress">
+                    headerText="List of Products" items="{ProductModel>/results}" itemPress="onItemPress">
                     <items>
                         <StandardListItem 
                             title="{ProductModel>Product} - {ProductModel>Product_Text}" icon="/images/products.png"
