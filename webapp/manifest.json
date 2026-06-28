@@ -34,6 +34,20 @@
           "odataVersion": "2.0"
         }
       }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "ZFIORI_PRODUCTS-Display": {
+          "semanticObject": "ZFIORI_PRODUCTS",
+          "action": "Display",
+          "title": "{{ZFIORI_PRODUCTS-Display.flpTitle}}",
+          "subTitle": "{{ZFIORI_PRODUCTS-Display.flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
     }
   },
   "sap.ui": {
@@ -77,11 +91,11 @@
         "preload": true,
         "settings": {}
       },
-      "ProductModel":{
-        "type":"sap.ui.model.json.JSONModel"
+      "ProductModel": {
+        "type": "sap.ui.model.json.JSONModel"
       },
-      "SelectedProductModel":{
-        "type":"sap.ui.model.json.JSONModel"
+      "SelectedProductModel": {
+        "type": "sap.ui.model.json.JSONModel"
       }
     },
     "resources": {
@@ -109,7 +123,7 @@
             "TargetOrderList"
           ]
         },
-         {
+        {
           "name": "RouteProductDisplay",
           "pattern": "DisplayProduct/{ProductId}",
           "target": [
@@ -125,7 +139,6 @@
           "viewId": "OrderList",
           "viewName": "OrderList"
         },
-        
         "TargetDisplayProduct": {
           "viewType": "XML",
           "transition": "slide",

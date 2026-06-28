@@ -4,8 +4,9 @@
     <Page id="page" title="{i18n>title}" showHeader="false">
         <content>
 
-                <List
-                    headerText="List of Products" items="{ProductModel>/results}" itemPress="onItemPress">
+                <List  
+                    headerText="List of Products" items="{ProductModel>/results}" itemPress="onItemPress" 	
+                    >
                     <items>
                         <StandardListItem 
                             title="{ProductModel>Product} - {ProductModel>Product_Text}" icon="/images/products.png"
@@ -14,8 +15,10 @@
                 </List> 
 
 
-               <List visible="false"  
-                    headerText="Product List - Direct Binding" items="{/I_Product}">
+               <List visible="false" 
+                    headerText="Product List - Direct Binding" items="{/I_Product}" growing="true"
+		            growingThreshold="5"
+		            growingScrollToLoad="true">
                     <items>
                         <StandardListItem 
                             title="{Product} - {Product_Text}" icon="/images/products.png"
