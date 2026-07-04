@@ -51,6 +51,24 @@ function (Controller, MessageToast,MessageBox) {
             else{
                 MessageToast.show("Maximum Capacity is within the limit of " + iMaxLength + " characters.");
             }
+        },
+
+        onCreateNewProduct: function () {
+            if(!this._oDialog){
+                this._oDialog = sap.ui.xmlfragment("salesorderapp.ui.fragments.Product", this);
+                this.getView().addDependent(this._oDialog);
+            }
+            this._oDialog.open();
+        
+        },
+
+        onSaveProduct: function () {
+            alert("Product saved successfully!");
+            this._oDialog.close();
+        },
+
+        onCancelProduct: function () { 
+            this._oDialog.close();
         }
 
     });

@@ -42,6 +42,7 @@
                                     
                                     <ToolbarSpacer />
                                     <Button text="Update" type="Default" icon="sap-icon://save" press="onUpdateProduct"/>
+                                    <Button text="Create a new Product" type="Default" icon="sap-icon://add" press="onCreateNewProduct"/>
                                 </Toolbar>
                             </f:toolbar>
                             <f:content>
@@ -59,6 +60,14 @@
 
                                 <Label text="Gross Weight" />
                                 <Input value="{SelectedProductModel>/GrossWeight}" maxLength="7" type="Number" description="{SelectedProductModel>/WeightUnit_Text}" />
+
+                                <Label text="Supplier" />
+                                <Input value="" showSuggestion="true" suggestionItems="{/I_Supplier_VH}">
+                                    <suggestionItems>
+                                        <core:Item text="{Supplier} - {SupplierName}"  />
+                                    </suggestionItems>
+                                </Input>
+
                             </f:content>
                         </f:SimpleForm>
                     </IconTabFilter>

@@ -1,0 +1,59 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+>
+<Dialog title="Create a new Product" contentWidth="400px" draggable="true" resizable="true">
+    <content>
+        <f:SimpleForm 
+            editable="true"
+            layout="ResponsiveGridLayout"
+            labelSpanXL="4"
+            labelSpanL="3"
+            labelSpanM="4"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="0"
+            emptySpanL="4"
+            emptySpanM="0"
+            emptySpanS="0"
+            columnsXL="2"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false"
+            ariaLabelledBy="Title1" >
+            <f:content>
+                <Label text="Product Name" required="true"/>
+                <Input value="" />
+
+                <Label text="Item Category" />
+                <Input value=""/>
+
+                <Label text="Maximum Capacity" />
+                <Input value="" change="onMaximumCapacityChange" liveChange="onMaximumCapacityLiveChange" type="Number" />
+
+                <Label text="Net Weight" />
+                <Input value="" maxLength="7" type="Number"/>
+
+                <Label text="Gross Weight" />
+                <Input value="" maxLength="7" type="Number" />
+
+                <Label text="Supplier" />
+                <Input value="" showSuggestion="true" suggestionItems="{/I_Supplier_VH}">
+                    <suggestionItems>
+                        <core:Item text="{Supplier} - {SupplierName}"  />
+                    </suggestionItems>
+                </Input>
+
+            </f:content>
+        </f:SimpleForm>
+    </content>
+    <beginButton>
+        <Button text="Cancel" type="Default" icon="sap-icon://decline" press="onCancelProduct"/>
+    </beginButton>
+    <endButton>
+        <Button text="Save" type="Default" icon="sap-icon://save" press="onSaveProduct"/>
+    </endButton>
+</Dialog>
+</core:FragmentDefinition>
